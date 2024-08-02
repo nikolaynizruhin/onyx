@@ -21,7 +21,7 @@ export default function ContactModal({ open, setOpen, setOpenThank }: { open: bo
 
   return (
     <Modal open={open} setOpen={setOpen}>
-      <form action={action} className="md:px-12 pt-14 md:pb-6">
+      <form action={action} className="md:px-12 sm:pt-14 md:pb-6">
         <Input name="name" label="Імʼя" required errors={state.errors?.name} />
         <Input name="phone" label="Телефон" required errors={state.errors?.phone} />
         <Textarea name="message" label="Повідомлення" required errors={state.errors?.message} />
