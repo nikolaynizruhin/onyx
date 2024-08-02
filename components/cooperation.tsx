@@ -20,9 +20,7 @@ export default function Cooperation({ setOpen }: { setOpen: (isOpen: boolean) =>
           </h2>
           <Divider className='mt-8 md:my-16 lg:mt-14 mb-8 lg:mb-5' />
           <p className="text-xs md:text-sm lg:text-lg font-normal text-white">Надсилайте Ваші пропозиції і ми обов’язково запропонуємо найкраще рішення.</p>
-          <div className="mt-9">
-            <Button onClick={() => setOpen(true)}>ВІДПРАВИТИ ЗАПИТ</Button>
-          </div>
+          <Button className="block mt-9" onClick={() => setOpen(true)}>ВІДПРАВИТИ ЗАПИТ</Button>
         </div>
       </Container>
     </div>
