@@ -11,7 +11,7 @@ export default function Textarea({ name, label, errors, ...props }: { name: stri
           id={name}
           name={name}
           rows={3}
-          className={`block w-full max-w-2xl border-0 py-1.5 text-[#505050] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset sm:text-sm sm:leading-6 ${errors ? 'ring-[#EE3023]' : 'focus:ring-[#478CCB]'}`}
+          className={`block w-full max-w-2xl border-0 py-1.5 text-[#505050] ring-1 ring-inset placeholder:text-gray-400 focus:ring-1 focus:ring-inset sm:text-sm sm:leading-6 ${errors ? 'ring-[#EE3023] focus:ring-[#EE3023]' : 'focus:ring-[#478CCB] ring-gray-300'}`}
           defaultValue={''}
           {...props}
         />
