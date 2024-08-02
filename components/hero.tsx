@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from './header'
 import Container from './container'
 import Button from './button'
+import Divider from './divider'
 
 export default function Hero({ setOpen }: { setOpen: (isOpen: boolean) => void }) {
   return (
@@ -20,9 +21,8 @@ export default function Hero({ setOpen }: { setOpen: (isOpen: boolean) => void }
             <h1 className="text-2xl md:text-[40px] lg:text-[45px] font-light leading-8 md:leading-[48px] lg:leading-[54px] text-white">
               Архітектура і будівництво житлової та комерційної нерухомості в Києві
             </h1>
-            <div className="mt-24 md:mt-36">
-              <Button onClick={() => setOpen(true)}>ЗАЛИШИТИ ЗАЯВКУ</Button>
-            </div>
+            <Divider className='mt-8 md:my-16 lg:mt-14 mb-14 lg:mb-24' />
+            <Button onClick={() => setOpen(true)}>ЗАЛИШИТИ ЗАЯВКУ</Button>
           </div>
         </Container>
       </div>
