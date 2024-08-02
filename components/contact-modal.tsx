@@ -25,7 +25,7 @@ export default function ContactModal({ open, setOpen, setOpenThank }: { open: bo
         <Input name="name" label="Імʼя" required errors={state.errors?.name} />
         <Input name="phone" label="Телефон" required errors={state.errors?.phone} />
         <Textarea name="message" label="Повідомлення" required errors={state.errors?.message} />
-        <TermsCheckbox errors={state.errors?.message} />
+        <TermsCheckbox errors={state.errors?.terms} />
         <SubmitButton />
       </form>
     </Modal>
