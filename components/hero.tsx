@@ -15,7 +15,7 @@ export default function Hero({ setOpen }: { setOpen: (isOpen: boolean) => void }
           height={800}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
-        <Container className="py-32 sm:py-48 md:py-56">
+        <Container className="py-48 md:py-56">
           <div className="max-w-[595px]">
             <h1 className="text-2xl md:text-[40px] lg:text-[45px] font-light leading-8 md:leading-[48px] lg:leading-[54px] text-white">
               Архітектура і будівництво житлової та комерційної нерухомості в Києві
