@@ -2,6 +2,7 @@ import company from "@/config/company"
 import { Contact as ContactInterface } from "@/lib/definitions"
 import Container from "./container"
 import Button from "./button"
+import { removeWhitespaces } from "@/lib/utils"
 
 const contacts: ContactInterface[] = [
   {
@@ -13,7 +14,7 @@ const contacts: ContactInterface[] = [
   {
     name: 'Телефон',
     value: company.phone,
-    href: 'tel:+380963737575',
+    href: `tel:${removeWhitespaces(company.phone)}`,
     target: '_self',
   },
   {
