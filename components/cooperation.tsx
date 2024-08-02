@@ -8,8 +8,8 @@ export default function Cooperation({ setOpen }: { setOpen: (isOpen: boolean) =>
       <Image
         src="/images/handshake.jpg"
         alt="River Garden"
-        width={1949}
-        height={1299}
+        width={1920}
+        height={1279}
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <Container className="py-14 md:py-44 lg:py-32">
