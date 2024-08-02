@@ -8,8 +8,8 @@ export default function Footer() {
       <Container className="py-9">
         <div className="text-white opacity-30 font-normal text-xs">
           <p>
-            <Link href="/docs/disclaimer.pdf" target="_blank" className="mr-5">Правові застереження</Link>
-            <Link href="/docs/privacy.pdf" target="_blank">Політика конфіденційності</Link>
+            <Link href="/docs/disclaimer.pdf" target="_blank" className="mr-5 underline">Правові застереження</Link>
+            <Link href="/docs/privacy.pdf" target="_blank" className="underline">Політика конфіденційності</Link>
           </p>
           <p className="mt-1">
             © {company.founded} - {new Date().getFullYear()} {company.name}. ВСІ ПРАВА ЗАХИЩЕНО.
