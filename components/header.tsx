@@ -5,6 +5,8 @@ import { useState } from "react"
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import company from "@/config/company"
+import { removeWhitespaces } from "@/lib/utils"
+import Link from "next/link"
 
 const navigation = [
   { name: 'Про компанію', href: '#about' },
@@ -15,6 +17,8 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const close = () => setMobileMenuOpen(false)
+  const open = () => setMobileMenuOpen(true)
 
   return (
     <header className="absolute inset-x-0 top-0 z-10 lg:bg-[#111D28]/[.9]">
@@ -35,7 +39,7 @@ export default function Header() {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={open}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="size-6 md:size-8" aria-hidden="true" />
@@ -72,7 +76,7 @@ export default function Header() {
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-white"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={close}
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon className="size-6 md:size-8" aria-hidden="true" />
@@ -81,20 +85,21 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="space-y-2 py-6">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
+                  onClick={close}
                   className="-mx-3 block rounded-lg px-3 py-2 text-sm font-normal text-white hover:bg-gray-800"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <a
-                href={company.phone}
+              <Link
+                href={'tel:' + removeWhitespaces(company.phone)}
                 className="-mx-3 block rounded-lg px-3 py-2 text-sm font-normal text-white hover:bg-gray-800"
               >
                 {company.phone}
-              </a>
+              </Link>
             </div>
           </div>
         </DialogPanel>
