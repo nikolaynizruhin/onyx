@@ -89,14 +89,14 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={close}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-sm font-normal text-white hover:bg-gray-800"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal text-white hover:bg-gray-800"
                 >
                   {item.name}
                 </Link>
               ))}
               <Link
                 href={'tel:' + removeWhitespaces(company.phone)}
-                className="-mx-3 block rounded-lg px-3 py-2 text-sm font-normal text-white hover:bg-gray-800"
+                className="-mx-3 block rounded-lg px-3 py-2 text-base font-normal text-white hover:bg-gray-800"
               >
                 {company.phone}
               </Link>
