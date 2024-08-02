@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Errors from "./errors";
 
 export default function TermsCheckbox({ errors }: { errors?: string[] }) {
@@ -18,7 +19,7 @@ export default function TermsCheckbox({ errors }: { errors?: string[] }) {
               </div>
               <div className="text-xs leading-6">
                 <label htmlFor="terms" className="font-normal text-[#111D28]">
-                  Я даю згоду на обробку персональних даних
+                  Я даю згоду на обробку <Link href="/docs/privacy.pdf" target="_blank" className="underline">персональних даних</Link>
                 </label>
                 <Errors errors={errors} />
               </div>
