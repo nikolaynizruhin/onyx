@@ -14,7 +14,7 @@ export default function Cooperation({ setOpen }: { setOpen: (isOpen: boolean) =>
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <Container className="py-14 md:py-44 lg:py-32">
-        <div className="max-w-56 sm:max-w-80 md:max-w-[480px]">
+        <div className="max-w-[480px]">
           <h2 className="text-2xl md:text-[40px] lg:text-[45px] font-normal leading-8 md:leading-[48px] lg:leading-[54px] text-white">
             Хочете стати нашим партнером або запропонувати нам співпрацю?
           </h2>
