@@ -9,8 +9,8 @@ export default function SubmitButton() {
   return (
     <div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4">
       <div className="mt-5 sm:col-span-2 sm:mt-0 sm:col-start-2">
-        <Button type="submit" aria-disabled={pending} disabled={pending} className="w-full sm:w-auto">
-          ВІДПРАВИТИ
+        <Button type="submit" aria-disabled={pending} disabled={pending} className={`w-full ${pending && 'bg-[#C2C2C2]'}`}>
+          {pending ? 'ВІДПРАВЛЯЮ...' : 'ВІДПРАВИТИ'}
         </Button>
       </div>
     </div>
