@@ -1,5 +1,6 @@
 import company from "@/config/company";
 import Container from "./container";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,8 +8,8 @@ export default function Footer() {
       <Container className="py-9">
         <div className="text-white opacity-30 font-normal text-xs">
           <p>
-            <a href="https://www.asty.com.ua/disclaimer" target="_blank" className="mr-5">Правові застереження</a>
-            <a href="https://www.asty.com.ua/privacy" target="_blank">Політика конфіденційності</a>
+            <Link href="/docs/disclaimer.pdf" target="_blank" className="mr-5">Правові застереження</Link>
+            <Link href="/docs/privacy.pdf" target="_blank">Політика конфіденційності</Link>
           </p>
           <p className="mt-1">
             © {company.founded} - {new Date().getFullYear()} {company.name}. ВСІ ПРАВА ЗАХИЩЕНО.
