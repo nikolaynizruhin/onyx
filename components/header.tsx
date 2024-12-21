@@ -24,7 +24,7 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-10 lg:bg-[#111D28]/[.9]">
       <nav className="mx-auto flex max-w-5xl lg:max-w-6xl items-center justify-between p-4 px-7 md:p-8 md:px-16 lg:py-0 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/">
+          <Link href="/">
             <span className="sr-only">Onyx</span>
             <Image
               className="h-8 md:h-12 lg:h-10 w-auto"
@@ -33,7 +33,7 @@ export default function Header() {
               height={33}
               alt="Logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -47,16 +47,16 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-xs font-semibold leading-[54px] text-white hover:text-[#478CCB] hover:border-b hover:border-[#478CCB]">
+            <Link key={item.name} href={item.href} className="text-xs font-semibold leading-[54px] text-white hover:text-[#478CCB] hover:border-b hover:border-[#478CCB]">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href={`tel:${company.phone}`} className="text-xs font-semibold leading-[14px] text-white flex items-center">
+          <Link href={`tel:${company.phone}`} className="text-xs font-semibold leading-[14px] text-white flex items-center">
             <Image className="mr-[6px]" src="/images/phone.svg" width={13} height={13} alt="Phone" />
             {company.phone}
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

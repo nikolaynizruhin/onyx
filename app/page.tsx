@@ -2,7 +2,8 @@ import Home from "@/components/home";
 import app from "@/config/app";
 import { Metadata } from "next";
 
-export function generateMetadata({ searchParams }: { searchParams: object }): Metadata {
+export async function generateMetadata(props: { searchParams: Promise<object> }): Promise<Metadata> {
+  const searchParams = await props.searchParams;
   const metadata: Metadata = {
     alternates: {
       canonical: app.url,

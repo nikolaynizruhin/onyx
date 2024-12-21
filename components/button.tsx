@@ -1,6 +1,12 @@
 'use client'
 
-export default function Button({ children, className, isOutline = false, ...props }: { children: string, className?: string, isOutline?: boolean, [key: string]: any }) {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: string;
+  className?: string;
+  isOutline?: boolean;
+}
+
+export default function Button({ children, className, isOutline = false, ...props }: ButtonProps) {
   const classes = `${isOutline 
     ? 'border border-white'
     : 'bg-[#478CCB]'

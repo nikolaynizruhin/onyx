@@ -1,6 +1,13 @@
 import Errors from "./errors";
 
-export default function Input({ name, label, type = 'text', errors, ...props }: { name: string, label: string, type?: string, errors?: string[], [key: string]: any }) {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  name: string;
+  label: string;
+  type?: string;
+  errors?: string[];
+}
+
+export default function Input({ name, label, type = 'text', errors, ...props }: InputProps) {
   return (
     <div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:pb-3">
       <label htmlFor="name" className="block text-sm font-normal text-[#505050] pt-3 sm:pt-1.5">

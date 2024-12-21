@@ -1,6 +1,12 @@
 import Errors from "./errors";
 
-export default function Textarea({ name, label, errors, ...props }: { name: string, label: string, errors?: string[], [key: string]: any }) {
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  name: string;
+  label: string;
+  errors?: string[];
+}
+
+export default function Textarea({ name, label, errors, ...props }: TextareaProps) {
   return (
     <div className="sm:grid sm:grid-cols-3 sm:items-start sm:gap-4 sm:pb-7">
       <label htmlFor="message" className="block text-sm font-normal text-[#505050] pt-3 sm:pt-1.5">

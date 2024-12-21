@@ -1,16 +1,15 @@
 'use client'
 
-import { useFormState } from "react-dom";
 import Input from "./input";
 import Modal from "./modal";
 import SubmitButton from "./submit-button";
 import TermsCheckbox from "./terms-checkbox";
 import Textarea from "./textarea";
 import { sendContactEmail } from "@/lib/actions";
-import { useEffect } from "react";
+import { useActionState, useEffect } from "react";
 
 export default function ContactModal({ open, setOpen, setOpenThank }: { open: boolean; setOpen: (open: boolean) => void; setOpenThank: (open: boolean) => void }) {
-  const [state, action] = useFormState(sendContactEmail, { success: false, errors: {} })
+  const [state, action] = useActionState(sendContactEmail, { success: false, errors: {} })
 
   useEffect(() => {
     if (state.success) {
