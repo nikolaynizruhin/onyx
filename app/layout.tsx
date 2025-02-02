@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
-      <body className={montserrat.className}>
+    <html lang="uk" className={montserrat.className}>
+      <body>
         {children}
         <SpeedInsights />
         <Analytics />
